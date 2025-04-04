@@ -1,0 +1,113 @@
+/* css/mine.css */
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial;
+}
+
+#game {
+    background: #c0c0c0;
+    padding: 16px;
+    border: 3px solid;
+    border-color: #fff #7b7b7b #7b7b7b #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 2px solid;
+    border-color: #7b7b7b #fff #fff #7b7b7b;
+}
+
+.counter {
+    background: #000;
+    color: #f00;
+    font-size: 24px;
+    padding: 4px 8px;
+    font-family: monospace;
+    min-width: 72px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 1px;
+    background: #c0c0c0;
+}
+
+.cell {
+    width: 24px;
+    height: 24px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #fff #7b7b7b #7b7b7b #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button {
+    width: auto;
+    min-width: 48px;
+    height: 48px;
+    padding: 8px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid;
+    border-color: #fff #7b7b7b #7b7b7b #fff;
+    background: #c0c0c0;
+    transition: all 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    border-color: #7b7b7b #fff #fff #7b7b7b;
+}
+
+.revealed {
+    border: 1px solid #7b7b7b;
+    background: #c0c0c0;
+}
+
+.mine {
+    background: #f00 url('data:image/svg+xml,<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="4" fill="black"/></svg>') center no-repeat;
+}
+
+.flag {
+    background: #c0c0c0 url('data:image/svg+xml,<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M1 9V1h2l1-1 1 1h4v8H1z" fill="red"/></svg>') center no-repeat;
+}
+
+#mines-display {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+}
+
+@media (max-width: 600px) {
+    button {
+        height: 40px;
+        min-width: 40px;
+        font-size: 20px;
+    }
+    
+    .counter {
+        font-size: 20px;
+        min-width: 60px;
+    }
+}
